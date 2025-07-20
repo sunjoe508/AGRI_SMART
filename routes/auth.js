@@ -37,4 +37,6 @@ router.post('/login', [
   res.json({ token });
 });
 
+const userSafe = user.toJSON();
+
 export default router;
