@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Makumi FarmConnect</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container py-5">
+    <h1 class="text-primary mb-4">Makumi FarmConnect</h1>
+    <div id="auth-form" class="mb-4">
+      <input id="email" type="email" placeholder="Email" class="form-control mb-2">
+      <input id="password" type="password" placeholder="Password" class="form-control mb-2">
+      <button onclick="login()" class="btn btn-success">Log In</button>
+      <button onclick="register()" class="btn btn-secondary">Register</button>
+    </div>
+    <div id="dashboard" class="d-none">
+      <h2>Crop Plans</h2><ul id="crop-list" class="list-group mb-3"></ul>
+      <button onclick="addCrop()" class="btn btn-primary mb-4">Add Crop</button>
+      <h2>Tasks</h2><ul id="task-list" class="list-group"></ul>
+      <button onclick="addTask()" class="btn btn-primary">Add Task</button>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
