@@ -38,5 +38,10 @@ router.post('/login', [
 });
 
 const userSafe = user.toJSON();
+catch (err) {
+  console.error(err.message);
+  res.status(500).json({ errors: [{ msg: 'Server error' }] });
+}
+
 
 export default router;
