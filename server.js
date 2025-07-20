@@ -7,6 +7,9 @@ import authRoutes from './routes/auth.js';
 import cropRoutes from './routes/crops.js';
 import taskRoutes from './routes/tasks.js';
 
+import helmet from 'helmet';
+app.use(helmet());
+
 dotenv.config();
 const app = express();
 app.use(cors());
